@@ -12,7 +12,11 @@ class CashRegister
 
   def add_item(title, price, qty = 1)
 
-    @last_trans_amnt = price
+    if qty > 0
+      @last_trans_amnt = price*qty
+    else
+      @last_trans_amnt = qty
+    end
 
     counter = 0
 
