@@ -12,6 +12,8 @@ class CashRegister
 
   def add_item(title, price, qty = 1)
 
+    @last_trans_amnt = price
+
     counter = 0
 
     loop do
