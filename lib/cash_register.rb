@@ -10,12 +10,13 @@ class CashRegister
     @items = []
   end
 
-  def add_item(title, price, qty = 0)
+  def add_item(title, price, qty = 1)
+
+    counter = 0
 
     loop do
-      counter = 0
-      if counter <= qty
-        @items << title
+      if counter < qty
+        items << title
         counter += 1
       else
         break
